@@ -6,10 +6,11 @@ body {
 #banner {
     width: 100%;
 }
+
 img.square {
     width: 400px;
     object-fit: cover;
-    height:400px;
+    height: 400px;
 }
 
 #toc {
@@ -27,28 +28,38 @@ img.square {
     color: black;
 }
 
-.purple{
+.purple {
     color: #561e8f;
 }
 
-.border{
+.border {
     border: 3px solid greenyellow;
 }
 
 
-.highlight{
+.highlight {
     background-color: yellow;
- }
+}
 
 
-.myPhotoImg{
+.myPhotoImg {
     width: 55px;
     height: 55px;
 }
 
 
-.classListTest{
+.classListTest {
     background-color: #561e8f;
     border: 10px solid black;
     margin: 5px;
+}
+
+.night {
+    background-color: black;
+    color: white;
+}
+
+.day {
+    background-color: white;
+    color: black;
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,13 +6,18 @@
     <title>DOM Selecting</title>
     <link rel="stylesheet" href="css/app.css" />
     <script src="js/script.js" defer></script>
+    <script src="js/events.js" defer></script>
   </head>
 
   <body class="day">
+    <button id="event-btn">Botão Eventos</button>
     <button onclick="changeLang()">Traduz para PT</button>
     <button onclick="changeImg()">Mudar a Imagem</button>
     <button onclick="changeAll()">Muda todos os lis</button>
     <button onclick="changeMode()">Modo Dia/Noite</button>
+    <button onclick="addLoginMessage()">Login</button>
+    <button onclick="removeChicken()">Remover Imagem de Galinha</button>
+    <div id="login-message"></div>
     <h1>Silkie Chickens</h1>
     <img
       id="banner"

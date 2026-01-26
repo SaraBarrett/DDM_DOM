@@ -31,7 +31,7 @@ function eggOrChicken() {
   ) {
     myImg.setAttribute(
       "src",
-      "https://devsprouthosting.com/images/chicken.jpg"
+      "https://devsprouthosting.com/images/chicken.jpg",
     );
   } else {
     myImg.setAttribute("src", "https://devsprouthosting.com/images/egg.jpg");
@@ -54,14 +54,37 @@ function makeRandom() {
 
   let myraimbow = document.querySelectorAll("span");
 
-//   let count = 0;
-//   for (let raimbow of myraimbow) {
-//     raimbow.style.backgroundColor = colors[count];
-//  count++;
-//   }
+  //   let count = 0;
+  //   for (let raimbow of myraimbow) {
+  //     raimbow.style.backgroundColor = colors[count];
+  //  count++;
+  //   }
 
-myraimbow.forEach((item, index) =>{
-   item.style.backgroundColor = colors[index];
+  myraimbow.forEach((item, index) => {
+    item.style.backgroundColor = colors[index];
+  });
 }
-)
+
+//pp 26
+function changeOrder() {
+  let myLis = document.querySelectorAll("li");
+
+  for (let element of myLis) {
+    if (element.classList.contains("highlight")) {
+      element.classList.remove("highlight");
+    } else {
+      element.classList.add("highlight");
+    }
+  }
 }
+
+
+//pp31
+function createBtns(){
+    for(let i = 1; i <=100; i++){
+    let createButton = document.createElement('button');
+    createButton.innerText = 'Botão criado' +i;
+
+    let myDiv = document.getElementById('container');
+    myDiv.appendChild(createButton);
+}}

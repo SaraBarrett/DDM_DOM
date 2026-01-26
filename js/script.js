@@ -36,3 +36,29 @@ function changeMode() {
     myBody.classList.add("day");
   }
 }
+let isCreated = false;
+//função que, ao ser clicada, adiciona um novo elemento
+function addLoginMessage() {
+  //criar elemento
+  let myH2 = document.createElement("h2");
+  if (!isCreated) {
+    isCreated = true;
+    //definir o texto para o elemento
+    myH2.textContent = "Olá Sara";
+
+    //indicar qual é o pai onde o novo elemento se vai encaixar
+    //seleccionar pai
+    let myDiv = document.getElementById("login-message");
+
+    //ao pai, dar o filho criado
+    myDiv.appendChild(myH2);
+  }
+}
+
+function removeChicken() {
+  //seleccionar o elemento a remover
+  let myBanner = document.getElementById("banner");
+
+  //remover elemento
+  myBanner.remove();
+}

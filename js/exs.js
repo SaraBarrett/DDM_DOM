@@ -11,6 +11,9 @@
 // console.log(doneTodos)
 // console.log(checkbox)
 
+let myForm = document.querySelector("#myShoppingList");
+let myUL = document.querySelector("ul");
+
 //pp15
 function changeTaste() {
   let mySpan = document.querySelector("span");
@@ -78,13 +81,31 @@ function changeOrder() {
   }
 }
 
-
 //pp31
-function createBtns(){
-    for(let i = 1; i <=100; i++){
-    let createButton = document.createElement('button');
-    createButton.innerText = 'Botão criado' +i;
+function createBtns() {
+  for (let i = 1; i <= 100; i++) {
+    let createButton = document.createElement("button");
+    createButton.innerText = "Botão criado" + i;
 
-    let myDiv = document.getElementById('container');
+    let myDiv = document.getElementById("container");
     myDiv.appendChild(createButton);
-}}
+  }
+}
+
+//pp5 Forms&Apis
+
+myForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  let formData = new FormData(this);
+  let product = formData.get("product");
+  let qt = formData.get("qt");
+
+
+  let myLi = document.createElement("li");
+
+  myLi.innerText = "nome: " + product + "- quantidade: " + qt;
+
+  myUL.appendChild(myLi);
+  this.reset();
+});

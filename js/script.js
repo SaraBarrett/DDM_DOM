@@ -40,18 +40,29 @@ let isCreated = false;
 //função que, ao ser clicada, adiciona um novo elemento
 function addLoginMessage() {
   //criar elemento
-  let myH2 = document.createElement("h2");
-  if (!isCreated) {
-    isCreated = true;
-    //definir o texto para o elemento
-    myH2.textContent = "Olá Sara";
+  // let myH2 = document.createElement("h2");
+  // if (!isCreated) {
+  //   isCreated = true;
+  //   //definir o texto para o elemento
+  //   myH2.textContent = "Olá Sara";
 
-    //indicar qual é o pai onde o novo elemento se vai encaixar
-    //seleccionar pai
-    let myDiv = document.getElementById("login-message");
+  //   //indicar qual é o pai onde o novo elemento se vai encaixar
+  //   //seleccionar pai
+  //   let myDiv = document.getElementById("login-message");
 
-    //ao pai, dar o filho criado
-    myDiv.appendChild(myH2);
+  //   //ao pai, dar o filho criado
+  //   myDiv.appendChild(myH2);
+  // }
+
+  if (localStorage.getItem("user")) {
+    //mostra a variável de sessão user
+    alert("olá " + localStorage.getItem("user"));
+  } else {
+    //usar o LocalStorage
+    let userName = prompt("Qual é o teu nome?");
+
+    //armazena na variável de sessão user o nome do user
+    localStorage.setItem("user", userName);
   }
 }
 

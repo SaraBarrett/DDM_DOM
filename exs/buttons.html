@@ -2,6 +2,7 @@
     <title>100 Buttons!</title>
 
     <link rel="stylesheet" href="../css/app.css">
+    <script src="../js/events.js" defer></script>
 </head>
 
 <body>
@@ -9,6 +10,20 @@
     <div id="container">
         
         <button onclick="createBtns()">Create 100Btns</button>
+
+        <hr>
+        <h3>Formulário do ZOO</h3>
+        <form id="animalForm" action="server">
+            <label for="animal">Insira um animal</label> <br>
+            <input id="animal" name="animal" type="text"><br>
+            <button type="submit">Submeter</button>
+        </form>
+
+        <h6>Lista de Animais</h6>
+        <ul id="animalList">
+
+        </ul>
+
 
     
     </div>
